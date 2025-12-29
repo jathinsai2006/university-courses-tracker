@@ -66,7 +66,6 @@ Filters by instructor and course
 Auto-refresh every 5 seconds
 
 
-📂 Project Structure
 project/
 │
 ├── backend/
@@ -90,7 +89,6 @@ pip install fastapi uvicorn sqlalchemy dash plotly pandas requests
 2️⃣ Run Backend API
 uvicorn backend.main:app --reload
 
-
 API runs at: http://127.0.0.1:8000
 
 Swagger Docs: http://127.0.0.1:8000/docs
@@ -100,13 +98,13 @@ python backend/seed_data.py
 
 4️⃣ Run Dashboard
 python dashboard/app.py
-
-
 Dashboard runs at: http://127.0.0.1:8050
 
 
-🎯 Learning Outcomes
 
+
+
+🎯 Learning Outcomes
 Practical understanding of REST APIs
 
 ORM-based database design
