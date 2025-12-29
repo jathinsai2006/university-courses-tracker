@@ -1,90 +1,133 @@
-# university-courses-tracker
-FastAPI + SQLAlchemy + Dash project
-# University Courses Tracker 📚
+🎓 University Courses Tracker Dashboard
 
-## 📌 Project Description
-The **University Courses Tracker** is a full-stack, data-driven dashboard application.
-It demonstrates **RESTful API development**, **database integration**, and **real-time analytics visualization**.
+A full-stack data-driven dashboard application that tracks university courses and visualizes course credit distribution in real time.
+This project demonstrates backend API development, database integration, and interactive analytics dashboards using modern Python frameworks.
+📌 Project Overview
 
-The backend is developed using **FastAPI** and **SQLAlchemy**, while the analytics dashboard
-is built using **Plotly and Dash**. Any CRUD operation performed through the API is
-immediately reflected in the dashboard.
+The University Courses Tracker is designed to manage academic course data and provide meaningful visual insights through an interactive dashboard.
 
-This project was developed as part of the subject  
-**Advanced Programming and Database Systems**.
+The system consists of:
 
----
+A RESTful backend API to perform CRUD operations on course data
 
-## 🛠 Technology Stack
+A relational database to persist course information
 
-### Backend
-- FastAPI
-- SQLAlchemy (ORM)
-- SQLite (Database)
+An analytics dashboard that dynamically reflects backend data changes
 
-### Frontend / Dashboard
-- Plotly
-- Dash
+This project was developed as part of an Advanced Programming and Database Systems / Data Visualization academic requirement.
 
-### Tools & Utilities
-- Swagger UI (API documentation & testing)
-- GitHub (Version control)
+Architecture Flow:
 
----
+Dash Dashboard (Frontend)
+        ↓ REST API Calls
+FastAPI Backend (CRUD APIs)
+        ↓ ORM
+SQLite Database
+
+🚀 Key Features
+🔹 Backend (FastAPI)
+
+RESTful API for managing university courses
+
+CRUD operations (Create, Read, Delete)
+
+SQLAlchemy ORM integration
+
+SQLite database for lightweight persistence
+
+Automatic API documentation using Swagger UI
+
+🔹 Database
+
+Relational schema using SQLAlchemy models
+
+Course attributes:
+
+Course Code
+
+Course Name
+
+Instructor
+
+Credits
+
+🔹 Dashboard (Dash + Plotly)
+
+Live data fetched from FastAPI backend
+
+Interactive bar chart (credits per course)
+
+Pie chart for credit distribution
+
+Editable table for updating instructor names
+
+Filters by instructor and course
+
+Auto-refresh every 5 seconds
 
 
-pip install fastapi uvicorn sqlalchemy pydantic dash plotly
-2️⃣ Install Required Packages
-pip install fastapi uvicorn sqlalchemy pydantic dash plotly
-
-3️⃣ Seed the Database (Optional)
-python seed_data.py
-
-4️⃣ Run Backend Server
-uvicorn main:app --reload
-
-
-Backend will run at:
-http://127.0.0.1:8000
-
-Swagger UI:
-http://127.0.0.1:8000/docs
-
-5️⃣ Run Dashboard
-python dashboard.py
+📂 Project Structure
+project/
+│
+├── backend/
+│   ├── main.py          # FastAPI application
+│   ├── database.py      # Database configuration
+│   ├── models.py        # SQLAlchemy models
+│   ├── schemas.py       # Pydantic schemas
+│   ├── seed_data.py     # Sample data insertion
+│   └── courses.db       # SQLite database
+│
+├── dashboard/
+│   └── app.py           # Dash analytics dashboard
+│
+└── README.md
 
 
-Dashboard will run at:
-http://127.0.0.1:8050
+⚙️ Setup Instructions
+1️⃣ Install Dependencies
+pip install fastapi uvicorn sqlalchemy dash plotly pandas requests
 
-🔗 API Documentation (Swagger)
+2️⃣ Run Backend API
+uvicorn backend.main:app --reload
 
-FastAPI automatically generates interactive API documentation using Swagger UI.
 
-Available Endpoints
-🔹 GET /courses
+API runs at: http://127.0.0.1:8000
 
-Fetch all course records from the database.
+Swagger Docs: http://127.0.0.1:8000/docs
 
-🔹 POST /courses
+3️⃣ (Optional) Seed Sample Data
+python backend/seed_data.py
 
-Add a new course.
+4️⃣ Run Dashboard
+python dashboard/app.py
 
-Request Body Example
 
-{
-  "course_code": "CS101",
-  "course_name": "Data Structures",
-  "instructor": "Dr Smith",
-  "credits": 4
-}
+Dashboard runs at: http://127.0.0.1:8050
 
-🔹 GET /courses/{id}
 
-Fetch a course by its ID.
+🎯 Learning Outcomes
 
-Returns 404 Not Found if the course does not exist.
+Practical understanding of REST APIs
 
-🔹 DELETE /courses/{id}
+ORM-based database design
 
-Delete a course by its ID.
+Backend–frontend integration
+
+Real-time dashboard development
+
+Data visualization and storytelling
+
+End-to-end full-stack workflow
+
+📌 Future Enhancements
+
+Update & authentication endpoints
+
+JWT-based role management
+
+PostgreSQL integration
+
+Cloud deployment
+
+Advanced analytics (KPIs, trends)
+
