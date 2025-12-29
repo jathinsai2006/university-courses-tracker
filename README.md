@@ -1,4 +1,4 @@
-🎓 University Courses Tracker Dashboard
+🎓 UNIVERSISTY COURSES TRACKER DASHBOARD
 
 A full-stack data-driven dashboard application that tracks university courses and visualizes course credit distribution in real time.
 This project demonstrates backend API development, database integration, and interactive analytics dashboards using modern Python frameworks.
